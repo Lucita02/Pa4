@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #590209, #1e1e1f);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "header"
+        "contenido"
+        "footer";
+    gap: 20px;
+}
+
+.banner {
+    grid-area: banner;
+}
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.titulo-animado {
+    animation: mover 3s infinite alternate;
+    grid-area: header;
+    color: #ffffff;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.banner {
+    grid-area: banner;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.contenido {
+    grid-area: contenido;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.columna {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.img-resp {
+    width: 100%;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+button {
+    background: #400207;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+}
+
+button:hover {
+    background: #8C464C;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.redes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icono {
+    font-size: 22px;
+    color: #8C464C;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.icono:hover {
+    color: #BF9B9E;
+    transform: scale(1.2);
+}
+
+.separador {
+    color: #ffffff;
+    font-size: 20px;
+    opacity: 0.6;
+}
